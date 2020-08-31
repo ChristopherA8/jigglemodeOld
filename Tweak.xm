@@ -5,9 +5,9 @@
 
 %hook SBIconView
 
-- (void)SBSApplicationShortcutItem:(NSArray *)arg1 {
+- (void)setApplicationShortcutItems:(NSArray *)itemsArray {
     
-    for (SBSApplicationShortcutItem *item in arg1) {
+    for (SBSApplicationShortcutItem *item in itemsArray) {
         
         if ([item.type isEqual:@"com.apple.springboardhome.application-shotcut-item.rearrange-icons"]) {
             
@@ -17,7 +17,7 @@
         
     }
     
-    %orig(arg1);
+    %orig(itemsArray);
     
 }
 
