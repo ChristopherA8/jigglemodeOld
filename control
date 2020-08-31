@@ -6,5 +6,5 @@ Description: Replaces "Edit Home Screen" with "Jiggle Mode" in 3D touch view
 Maintainer: Chr1s
 Author: Chr1s
 Section: Tweaks
-Icon: https://repo.chr1s.dev/icons/JiggleMode/icon.png
+Icon: https://repo.chr1s.dev/icons/JiggleMode/icon@3x.png
 Depends: mobilesubstrate (>= 0.9.5000)
