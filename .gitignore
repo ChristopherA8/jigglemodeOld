@@ -2,3 +2,8 @@
 /.dragon
 /.theos
 /packages
+/jigglemodeprefs/.DS_Store
+/jigglemodeprefs/layout/.DS_Store
+/jigglemodeprefs/layout/Library/.DS_Store
+/jigglemodeprefs/layout/Library/PreferenceLoader/.DS_Store
+/jigglemodeprefs/layout/Library/PreferenceLoader/Preferences/.DS_Store
