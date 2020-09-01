@@ -1,10 +1,10 @@
 Package: com.chr1s.jigglemode
 Name: Jiggle Mode
-Version: 1.0.7
+Version: 1.0.8
 Architecture: iphoneos-arm
 Description: Replaces "Edit Home Screen" with "Jiggle Mode" in 3D touch view
 Maintainer: Chr1s
 Author: Chr1s
 Section: Tweaks
-Icon: https://repo.chr1s.dev/icons/JiggleMode/icon@3x.png
+Icon: file:///Library/PreferenceBundles/jigglemodeprefs.bundle/icon@3x.png
 Depends: mobilesubstrate (>= 0.9.5000)

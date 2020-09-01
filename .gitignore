@@ -3,6 +3,7 @@
 /.theos
 /packages
 /jigglemodeprefs/.DS_Store
+/jigglemodeprefs/Resources/.DS_Store
 /jigglemodeprefs/layout/.DS_Store
 /jigglemodeprefs/layout/Library/.DS_Store
 /jigglemodeprefs/layout/Library/PreferenceLoader/.DS_Store

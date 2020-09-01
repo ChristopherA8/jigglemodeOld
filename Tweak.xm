@@ -38,6 +38,10 @@ void TweakSettings() {
 %end
 
 %ctor {
-    TweakSettings();
-    %init
+// Found in https://github.com/EthanRDoesMC/Dawn/commit/847cb5192dae9138a893e394da825e86be561a6b
+	if ( [[[[NSProcessInfo processInfo] arguments] objectAtIndex:0] containsString:@"SpringBoard.app"] ) {
+		TweakSettings();
+		CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)TweakSettings, CFSTR("com.chr1s.jigglemode.settingschanged"), NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
+		%init; // == %init(_ungrouped);
+	}
 }
