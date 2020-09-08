@@ -12,3 +12,5 @@ JiggleMode_FILES = Tweak.xm
 JiggleMode_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tweak.mk
+SUBPROJECTS += jigglemodeprefs
+include $(THEOS_MAKE_PATH)/aggregate.mk
