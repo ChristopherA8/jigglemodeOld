@@ -8,8 +8,9 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = JiggleMode
 
-JiggleMode_FILES = Tweak.xm
-JiggleMode_CFLAGS = -fobjc-arc
+$(TWEAK_NAME)_FILES = Tweak.xm
+$(TWEAK_NAME)_EXTRA_FRAMEWORKS += Cephei
+$(TWEAK_NAME)_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 SUBPROJECTS += jigglemodeprefs

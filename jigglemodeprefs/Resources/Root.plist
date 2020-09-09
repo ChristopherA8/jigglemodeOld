@@ -3,12 +3,44 @@
 <plist version="1.0">
 <dict>
 	<key>items</key>
-	<array>
+	<array> <!--
 		<dict>
-			<key>cell</key>
-			<string>PSGroupCell</string>
-			<key>label</key>
-			<string>jigglemodeprefs First Page</string>
+    		<key>cell</key>
+    		<string>PSGroupCell</string>
+    		<key>headerCellClass</key>
+    		<string>HBImageTableCell</string>
+    		<key>height</key>
+    		<integer>405</integer>
+    		<key>icon</key>
+    		<string>banner.png</string>
+			<key>alignment</key>
+			<integer>0</integer>
+		</dict>
+		-->
+		<!--
+		<dict>
+    		<key>cell</key>
+    		<string>PSGroupCell</string>
+    		<key>headerCellClass</key>
+    		<string>HBPackageNameHeaderCell</string>
+			<key>packageIdentifier</key>
+			<string>com.chr1s.jigglemodeprefs</string>
+			<key>backgroundGradientColors</key>
+			<array>
+				<string>#FF14FF</string>
+				<string>#14FFD4</string>
+			</array>
+			<key>alignment</key>
+			<integer>0</integer>
+		</dict>
+		-->
+		<dict>
+    		<key>cell</key>
+    		<string>PSGroupCell</string>
+    		<key>headerCellClass</key>
+    		<string>bannerImageCell</string>
+			<key>height</key>
+			<integer>150</integer>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -18,12 +50,41 @@
 			<key>defaults</key>
 			<string>com.chr1s.jigglemodeprefs</string>
 			<key>key</key>
-			<string>AwesomeSwitch1</string>
+			<string>enableSwitch</string>
 			<key>label</key>
-			<string>Awesome Switch 1</string>
+			<string>Enabled/Disabled</string>
+			<key>PostNotification</key>
+			<string>com.chr1s.jigglemodeprefs/ReloadPrefs</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Respring not required to enable/disable tweak</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>respring</string>
+			<key>confirmation</key>
+				<dict>
+					<key>prompt</key>
+					<string>Are you sure?</string>
+					<key>title</key>
+					<string>Respring</string>
+					<key>okTitle</key>
+					<string>Respring</string>
+					<key>cancelTitle</key>
+					<string>Cancel</string>
+				</dict>
+			<key>isDestructive</key>
+			<true/>
+			<key>label</key>
+			<string>Respring</string>
 		</dict>
 	</array>
 	<key>title</key>
-	<string>jigglemodeprefs</string>
+	<string>Jiggle Mode</string>
 </dict>
 </plist>

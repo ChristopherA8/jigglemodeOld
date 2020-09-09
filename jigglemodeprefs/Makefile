@@ -4,10 +4,11 @@ include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = jigglemodeprefs
 
-jigglemodeprefs_FILES = THXRootListController.m
-jigglemodeprefs_FRAMEWORKS = UIKit
-jigglemodeprefs_PRIVATE_FRAMEWORKS = Preferences
-jigglemodeprefs_INSTALL_PATH = /Library/PreferenceBundles
-jigglemodeprefs_CFLAGS = -fobjc-arc
+$(BUNDLE_NAME)_FILES = THXRootListController.m
+$(BUNDLE_NAME)_FRAMEWORKS = UIKit
+$(BUNDLE_NAME)_PRIVATE_FRAMEWORKS = Preferences
+$(BUNDLE_NAME)_EXTRA_FRAMEWORKS += Cephei CepheiPrefs
+$(BUNDLE_NAME)_INSTALL_PATH = /Library/PreferenceBundles
+$(BUNDLE_NAME)_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/bundle.mk
