@@ -24,26 +24,27 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier specifier:specifier];
 
 	if (self) {
-	    UILabel *tweakLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, self.contentView.bounds.size.width + 30, 50)];
+	    UILabel *tweakLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, self.contentView.bounds.size.width + 30, 55)];
 	    [tweakLabel setTextAlignment:NSTextAlignmentLeft];
 	    [tweakLabel setFont:[UIFont systemFontOfSize:50 weight:UIFontWeightRegular]];
 	    tweakLabel.text = @"Jiggle Mode";
 
-	    UILabel *devLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 70, self.contentView.bounds.size.width + 30, 50)];
+	    UILabel *devLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 75, self.contentView.bounds.size.width + 30, 50)];
 	    [devLabel setTextAlignment:NSTextAlignmentLeft];
 	    [devLabel setFont:[UIFont systemFontOfSize:20 weight:UIFontWeightMedium]];
-	    devLabel.alpha = 0.8;
-	    devLabel.text = @"1.1.0";
+	    devLabel.alpha = 0.7;
+	    devLabel.text = @"1.1.6";
 
-	    NSBundle *bundle = [[NSBundle alloc] initWithPath:@"/Library/PreferenceBundles/jiggleModePrefs.bundle"];
-	    UIImage *logo = [UIImage imageWithContentsOfFile:[bundle pathForResource:@"icon" ofType:@"png"]];
+	    NSBundle *bundle = [[NSBundle alloc] initWithPath:@"/Library/PreferenceBundles/jigglemodeprefs.bundle"];
+	    UIImage *logo = [UIImage imageWithContentsOfFile:[bundle pathForResource:@"iconFullSize" ofType:@"png"]];
 	    UIImageView *icon = [[UIImageView alloc] initWithImage:logo];
-	    icon.frame = CGRectMake(self.contentView.bounds.size.width - 35, 35, 70, 70);
+	    //icon.frame = CGRectMake(self.contentView.bounds.size.width - 35, 35, 70, 70);
+		icon.frame = CGRectMake(20, 30, self.contentView.bounds.size.width + 30, 55);
 	    icon.translatesAutoresizingMaskIntoConstraints = NO;
 
+	    [self addSubview:icon];
 	    [self addSubview:tweakLabel];
 	    [self addSubview:devLabel];
-	    [self addSubview:icon];
 
 	    [icon.rightAnchor constraintEqualToAnchor:self.rightAnchor constant:-20].active = YES;
 	    [icon.centerYAnchor constraintEqualToAnchor:self.centerYAnchor].active = YES;
