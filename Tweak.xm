@@ -5,8 +5,15 @@
 @property (nonatomic, copy) NSString * localizedTitle;
 @end
 
+/*
+@interface SBIconImageView : NSObject
+@property (nonatomic, assign) BOOL *jittering;
+@end
+*/
+
 //Preferences Variables
 BOOL enableSwitch;
+BOOL jitter;
 
 %hook SBIconView
 
@@ -26,6 +33,15 @@ BOOL enableSwitch;
     
 }
 
+
+-(void)setEditing:(BOOL)arg1 animated:(BOOL)arg2 {
+    if (jitter && enableSwitch) {
+        arg1 = YES;
+        arg2 = YES; 
+    }
+    %orig;
+}
+
 %end
 
 
@@ -33,5 +49,6 @@ BOOL enableSwitch;
 
   HBPreferences *preferences = [[HBPreferences alloc] initWithIdentifier:@"com.chr1s.jigglemodeprefs"];
   [preferences registerBool:&enableSwitch default:YES forKey:@"enableSwitch"];
+  [preferences registerBool:&jitter default:FALSE forKey:@"jitter"];
 
 }

@@ -6,6 +6,9 @@
 #import <Preferences/PSSpecifier.h>
 #import <Preferences/PSTableCell.h>
 
+@interface PSListController (jiggleMode)
+- (void)setFrame:(CGRect)frame;
+@end
 
 @interface THXRootListController : PSListController
 @end
