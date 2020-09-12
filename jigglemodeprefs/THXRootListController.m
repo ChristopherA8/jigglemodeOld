@@ -33,7 +33,7 @@
 	    [devLabel setTextAlignment:NSTextAlignmentLeft];
 	    [devLabel setFont:[UIFont systemFontOfSize:20 weight:UIFontWeightMedium]];
 	    devLabel.alpha = 0.7;
-	    devLabel.text = @"1.1.15";
+	    devLabel.text = @"1.2.0";
 
 	    //OG//NSBundle *bundle = [[NSBundle alloc] initWithPath:@"/Library/PreferenceBundles/jigglemodeprefs.bundle"];
 	    //OG//UIImage *logo = [UIImage imageWithContentsOfFile:[bundle pathForResource:@"icon" ofType:@"png"]];
