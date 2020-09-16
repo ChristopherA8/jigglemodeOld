@@ -66,7 +66,7 @@
 			<key>key</key>
 			<string>jitter</string>
 			<key>label</key>
-			<string>Persistent Jiggling</string>
+			<string>Persistent Jiggling (beta)</string>
 			<key>PostNotification</key>
 			<string>com.chr1s.jigglemodeprefs/ReloadPrefs</string>
 		</dict>
